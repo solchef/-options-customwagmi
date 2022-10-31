@@ -1,4 +1,4 @@
-// connectors/miniProgram/miniProgram.ts
+// src/connectors/miniProgram/miniProgram.ts
 import { getAddress } from "@ethersproject/address";
 import { ConnectorNotFoundError, ResourceUnavailableError, UserRejectedRequestError } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";

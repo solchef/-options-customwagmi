@@ -1,4 +1,3 @@
-"use strict";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -17,14 +16,14 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// connectors/binanceWallet/index.ts
+// src/connectors/binanceWallet/index.ts
 var binanceWallet_exports = {};
 __export(binanceWallet_exports, {
   BinanceWalletConnector: () => BinanceWalletConnector
 });
 module.exports = __toCommonJS(binanceWallet_exports);
 
-// connectors/binanceWallet/binanceWallet.ts
+// src/connectors/binanceWallet/binanceWallet.ts
 var import_wagmi = require("wagmi");
 var import_injected = require("wagmi/connectors/injected");
 var import_bytes = require("@ethersproject/bytes");

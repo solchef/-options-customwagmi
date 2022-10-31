@@ -1,4 +1,4 @@
-// connectors/binanceWallet/binanceWallet.ts
+// src/connectors/binanceWallet/binanceWallet.ts
 import {
   ConnectorNotFoundError,
   ResourceUnavailableError,

@@ -12,7 +12,7 @@ declare class BinanceWalletConnector extends InjectedConnector {
     connect({ chainId }?: {
         chainId?: number;
     }): Promise<{
-        account: `0x${string}`;
+        account: string;
         chain: {
             id: number;
             unsupported: boolean;

@@ -1,4 +1,3 @@
-"use strict";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -17,14 +16,14 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// connectors/miniProgram/index.ts
+// src/connectors/miniProgram/index.ts
 var miniProgram_exports = {};
 __export(miniProgram_exports, {
   MiniProgramConnector: () => MiniProgramConnector
 });
 module.exports = __toCommonJS(miniProgram_exports);
 
-// connectors/miniProgram/miniProgram.ts
+// src/connectors/miniProgram/miniProgram.ts
 var import_address = require("@ethersproject/address");
 var import_wagmi = require("wagmi");
 var import_injected = require("wagmi/connectors/injected");

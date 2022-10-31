@@ -1,16 +1,13 @@
 // src/provider.tsx
 import { Web3Provider } from "@ethersproject/providers";
+import React from "react";
 import { createContext, useContext } from "react";
 import useSWRImmutable from "swr/immutable";
 import { useAccount, WagmiConfig, useNetwork } from "wagmi";
-import { jsx } from "react/jsx-runtime";
 function WagmiProvider(props) {
-  return /* @__PURE__ */ jsx(WagmiConfig, {
-    client: props.client,
-    children: /* @__PURE__ */ jsx(Web3LibraryProvider, {
-      children: props.children
-    })
-  });
+  return /* @__PURE__ */ React.createElement(WagmiConfig, {
+    client: props.client
+  }, /* @__PURE__ */ React.createElement(Web3LibraryProvider, null, props.children));
 }
 var Web3LibraryContext = createContext(void 0);
 var useWeb3LibraryContext = () => {
@@ -23,10 +20,9 @@ var Web3LibraryProvider = (props) => {
     const provider = await (connector == null ? void 0 : connector.getProvider());
     return new Web3Provider(provider);
   });
-  return /* @__PURE__ */ jsx(Web3LibraryContext.Provider, {
-    value: library,
-    children: props.children
-  });
+  return /* @__PURE__ */ React.createElement(Web3LibraryContext.Provider, {
+    value: library
+  }, props.children);
 };
 
 // src/useWeb3React.ts

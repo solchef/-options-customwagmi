@@ -18,14 +18,14 @@ declare class MiniProgramConnector extends InjectedConnector {
     connect({ chainId }?: {
         chainId?: number;
     }): Promise<{
-        account: `0x${string}`;
+        account: string;
         chain: {
             id: number;
             unsupported: boolean;
         };
         provider: any;
     }>;
-    getAccount(): Promise<`0x${string}`>;
+    getAccount(): Promise<string>;
     getChainId(): Promise<number>;
     getProvider(): Promise<any>;
 }

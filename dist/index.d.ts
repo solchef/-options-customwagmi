@@ -1,4 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers';
+import React from 'react';
 import * as wagmi from 'wagmi';
 import { WagmiConfigProps } from 'wagmi';
 import { Provider, WebSocketProvider, SignMessageArgs } from '@wagmi/core';
@@ -8,7 +9,7 @@ declare const useWeb3LibraryContext: () => Web3Provider | undefined;
 
 declare function useWeb3React(): {
     chainId: number | undefined;
-    account: `0x${string}` | undefined;
+    account: string | undefined;
     isConnected: boolean;
     isConnecting: boolean;
     chain: (wagmi.Chain & {

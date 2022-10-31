@@ -1,4 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers'
+import React from 'react';
 import { createContext, useContext } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { useAccount, WagmiConfig, WagmiConfigProps, useNetwork } from 'wagmi'

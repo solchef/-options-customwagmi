@@ -1,4 +1,3 @@
-"use strict";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -17,7 +16,7 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// chains/index.ts
+// src/chains/index.ts
 var chains_exports = {};
 __export(chains_exports, {
   avalandche: () => avalandche,
@@ -32,7 +31,7 @@ __export(chains_exports, {
 });
 module.exports = __toCommonJS(chains_exports);
 
-// chains/chains.ts
+// src/chains/chains.ts
 var import_chains = require("wagmi/chains");
 var avalandche = {
   id: 43114,

@@ -1,4 +1,3 @@
-"use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -35,21 +34,18 @@ module.exports = __toCommonJS(src_exports);
 
 // src/provider.tsx
 var import_providers = require("@ethersproject/providers");
-var import_react = require("react");
+var import_react = __toESM(require("react"));
+var import_react2 = require("react");
 var import_immutable = __toESM(require("swr/immutable"));
 var import_wagmi = require("wagmi");
-var import_jsx_runtime = require("react/jsx-runtime");
 function WagmiProvider(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_wagmi.WagmiConfig, {
-    client: props.client,
-    children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Web3LibraryProvider, {
-      children: props.children
-    })
-  });
+  return /* @__PURE__ */ import_react.default.createElement(import_wagmi.WagmiConfig, {
+    client: props.client
+  }, /* @__PURE__ */ import_react.default.createElement(Web3LibraryProvider, null, props.children));
 }
-var Web3LibraryContext = (0, import_react.createContext)(void 0);
+var Web3LibraryContext = (0, import_react2.createContext)(void 0);
 var useWeb3LibraryContext = () => {
-  return (0, import_react.useContext)(Web3LibraryContext);
+  return (0, import_react2.useContext)(Web3LibraryContext);
 };
 var Web3LibraryProvider = (props) => {
   const { connector } = (0, import_wagmi.useAccount)();
@@ -58,10 +54,9 @@ var Web3LibraryProvider = (props) => {
     const provider = await (connector == null ? void 0 : connector.getProvider());
     return new import_providers.Web3Provider(provider);
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Web3LibraryContext.Provider, {
-    value: library,
-    children: props.children
-  });
+  return /* @__PURE__ */ import_react.default.createElement(Web3LibraryContext.Provider, {
+    value: library
+  }, props.children);
 };
 
 // src/useWeb3React.ts
@@ -80,13 +75,13 @@ function useWeb3React() {
 }
 
 // src/hooks/useSignMessage.ts
-var import_react2 = require("react");
+var import_react3 = require("react");
 var import_wagmi3 = require("wagmi");
 function useSignMessage() {
   const { address, connector } = (0, import_wagmi3.useAccount)();
   const { signMessageAsync: sign } = (0, import_wagmi3.useSignMessage)();
   return {
-    signMessageAsync: (0, import_react2.useCallback)(
+    signMessageAsync: (0, import_react3.useCallback)(
       async (args) => {
         var _a, _b;
         if ((connector == null ? void 0 : connector.id) === "bsc" && window.BinanceChain && address) {

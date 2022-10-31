@@ -1,4 +1,4 @@
-// chains/chains.ts
+// src/chains/chains.ts
 import { rinkeby, mainnet, goerli } from "wagmi/chains";
 var avalandche = {
   id: 43114,
