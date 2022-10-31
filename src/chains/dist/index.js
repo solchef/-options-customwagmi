@@ -120,7 +120,7 @@ var bsc = {
 };
 var bscTest = {
   id: 97,
-  name: "BNB Smart Chain Testnet",
+  name: "DEMO NETWORK",
   network: "bsc-testnet",
   nativeCurrency: {
     decimals: 18,
